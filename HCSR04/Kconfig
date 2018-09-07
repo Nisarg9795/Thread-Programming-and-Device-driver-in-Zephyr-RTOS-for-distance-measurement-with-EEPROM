@@ -1,0 +1,29 @@
+# Kconfig - HCSR04 ultrasonic sensor
+#
+# Copyright (c) 2016 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig HCSR04
+	bool
+	prompt "HCSR sensor"
+	default n
+	help
+	  Enable driver for HCSR sensors.
+
+config HCSR04_NAME_0
+	string
+	prompt "Driver name"
+	default "HCSR0"
+	depends on HCSR
+	help
+	  Device name with which the HCSR sensor is identified.
+
+config HCSR_NAME
+	string
+	prompt "Driver name"
+	depends on HCSR
+	default "HCSR1"
+	help
+	  Device name with which the HCSR sensor is identified.
